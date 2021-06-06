@@ -1,0 +1,234 @@
+﻿* {
+    font-family: "Raleway", sans-serif;
+    padding: 0px;
+    margin: 0;
+    font-size: 19px;
+}
+
+body {
+    background: #ffffff;
+}
+
+h1 {
+    font-size: 42px;
+}
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    color: #3379b0;
+    margin-bottom: 30px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+header {
+    height: 700px;
+    background: url("../img/Web-Header-Background-1.svg") no-repeat center top;
+    background-size: cover;
+    padding-bottom: 200px;
+    color: #ffffff;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 36px;
+}
+
+.menu {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.menu a:hover {
+    color: #ffffff;
+    text-decoration: overline;
+}
+
+.container_info {
+    background: url("../img/01.png") no-repeat right top;
+    background-size: 450px;
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+}
+
+.info {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-left: 10%;
+    width: 45%;
+}
+
+.info p {
+    margin: 20px 0 50px 0;
+}
+
+.rectangle {
+    background: #1a1b6a;
+    border-radius: 100px;
+    width: 250px;
+    height: 70px;
+}
+
+.rectangle a {
+    display: block;
+    text-align: center;
+    padding: 23px 40px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.rectangle:hover {
+    background-color: inherit;
+    border: 1px solid #ffffff;
+    transition: 300ms linear;
+}
+
+.rectangle a:hover {
+    color: #ffffff;
+}
+
+.container_studio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 15%;
+    line-height: 1.5;
+}
+
+.container_hackathon {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 15%;
+    line-height: 1.5;
+}
+
+.container p {
+    margin: 10px;
+}
+
+.section_form {
+    width: 90%;
+    margin-left: 5%;
+}
+.main__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_form {
+    width: 90%;
+    margin-left: 5%;
+}
+
+/*Форма*/
+input,
+label,
+form p {
+    display: block;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input {
+    background-color: #d7eeff;
+    border-radius: 10px;
+    padding: 10px 0 10px 20px;
+    width: 250px;
+}
+
+/*Навыки*/
+.textcols-item {
+    display: flex;
+}
+
+.textcols-item label {
+    width: 80px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.textcols-item input,
+.task input {
+    width: auto;
+    margin-top: 20px;
+}
+
+/*Задача*/
+.task {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 300px;
+}
+
+.task label {
+    width: auto;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.task input,
+.task input {
+    width: 20px;
+    margin-top: 20px;
+}
+
+/*Кнопка отправки*/
+.form_rectangle {
+    padding: 0;
+    margin-top: 50px;
+    width: 250px;
+    height: 70px;
+    background: #3379b0;
+    color: #ffffff;
+    border-radius: 100px;
+}
+
+.form_rectangle:hover {
+    background-color: inherit;
+    border: 2px solid #3379b0;
+    color: #3379b0;
+    transition: 300ms linear;
+}
+
+/**/
+footer {
+    background: url("../img/Live-Background-1.svg") no-repeat center bottom;
+    background-size: cover;
+    color: #ffffff;
+    height: 35vh;
+    display: flex;
+    align-items: flex-end;
+}
+footer p {
+    padding-bottom: 20px;
+}

@@ -1,0 +1,154 @@
+﻿{% load static %}
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hackathon</title>
+    <link rel="stylesheet" href="{% static 'app/css/style2.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav_menu">
+                <ul class="menu">
+                    <li><a href="#">PolyWeb</a></li>
+                    <li><a href="#studio">О студии</a></li>
+                    <li><a href="#hackathon">О хакатоне</a></li>
+                    <li><a href="#form">Заявка</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container_info">
+            <div class="info">
+                <h1>
+                    PolyWeb Studio приглашает принять участие в хакатоне
+                </h1>
+                <p>Соревнование для программистов, дизайнеров и других специалистов из области разработки</p>
+                <div class="rectangle">
+                    <a href="#form">Подать заявку</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="studio" class="studio">
+            <h2>PolyWeb studio</h2>
+            <div class="container_studio">
+                <p>Мы – веб-студия, открытая уверенными, идейными людьми специально для Вас.</p>
+                <p>Наша студия занимается разработкой сайтов не только с продуманным интерфейсом, интересным и
+                    уникальным дизайном, но и с применением геймификации.</p>
+                <p>Молодые и дерзкие разработчики все ярче проявляют себя с каждым новым проектом, приносят
+                    креативность, реализуют свои самые лучшие и неординарные идеи, а опытные руководители контролируют
+                    процесс создания, создают гармонию.</p>
+            </div>
+        </section>
+
+        <section id="hackathon" class="hackathon">
+            <h2>Хакатон</h2>
+            <div class="container_hackathon">
+                <div class="container_hackathon_info">
+                    <p> Хакатон — форум для разработчиков, во время которого специалисты из разных областей разработки
+                        программного обеспечения сообща разрабатывают веб-сервисы (мобильные приложения, сайты,
+                        веб-приложения) для решения социально значимых задач. Обучение новому на хакатонах происходит
+                        очень быстро, и полученные знания тут же можно использовать на практике.</p><br />
+                    <p>Результатом хакатона является готовый к запуску минимальный жизнеспособный продукт – первая
+                        версия приложения, на котором можно протестировать работу идеи.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="form" class="section_form">
+            <h2>Подай заявку и стань участником хакатона</h2>
+            <div class="container_form">
+                <form action="{% url 'site' %}" method="POST" class="main__form">
+                    {% csrf_token %}
+                    <div class="form__block">
+                        <label for="id_name">Ваше имя</label>
+                        {{ application.name }}
+                    </div>
+                    <div class="form__block">
+                        <label for="id_surname">Ваша фамилия</label>
+                        {{ application.surname }}
+                    </div>
+                    <div class="form__block">
+                        <label for="id_number">Введите телефон</label>
+                        {{ application.number }}
+                    </div>
+                    <div class="form__block">
+                        <label for="id_email">Ваша эл. почта</label>
+                        {{ application.email }}
+                    </div>
+
+
+
+
+                    <p>Ваши навыки</p>
+                    <div class="textcols-item">
+                        {{ application.html }}
+                        <label for="id_html">HTML</label>
+                        {{ application.css }}
+                        <label for="id_css">CSS</label>
+                        {{ application.js }}
+                        <label for="id_js">JS</label>
+                    </div>
+                    <div class="textcols-item">
+                        {{ application.vue }}
+                        <label for="id_vue">Vue</label>
+                        {{ application.react }}
+                        <label for="id_react">React</label>
+                        {{ application.ux }}
+                        <label for="id_ux">UX/UI</label>
+                    </div>
+                    <div class="textcols-item">
+                        {{ application.python }}
+                        <label for="id_python">Python</label>
+                        {{ application.php }}
+                        <label for="id_php">PHP</label>
+                        {{ application.django }}
+                        <label for="id_django">Django</label>
+                    </div>
+                    <p>Выберите задачу</p>
+                    <div class="task">
+
+                        {{ application.analytics }}
+                        <label for="id_analytics">Создание запросов для получения аналитики на основе естественного
+                            языка</label>
+                        {{ application.platform }}
+                        <label for="id_platform">Разработка открытой платформы для мгновенного обмена
+                            сообщениями</label>
+                        {{ application.students }}
+                        <label for="id_students">Разработка моделей оценки студентов на основании открытых
+                            данных</label>
+                        {{ application.web }}
+                        <label for="id_web">Разработка механизма сборки и исполнения кода веб-приложения в рамках
+                            архитектуры micro frontend</label>
+                        {{ application.mechanism }}
+                        <label for="id_mechanism">Разработка механизма сборки и исполнения кода мобильных приложений в
+                            рамках микросервисной архитектуры</label>
+                        {{ application.mobile }}
+                        <label for="id_mobile">Разработка мобильного приложения для автоматической фиксации участия в
+                            спортивных мероприятиях</label>
+                    </div>
+                    <input type="submit" value="Отправить" class="form_rectangle">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@PolyWeb Studio</p>
+    </footer>
+
+</body>
+
+</html>
